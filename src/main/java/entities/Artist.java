@@ -11,8 +11,8 @@ public class Artist {
     @Column(name = "artistId")
     private int artistId;
     private String name;
-//    @OneToMany(mappedBy = "artist", cascade = CascadeType.ALL, orphanRemoval = true)
-//    private List<Album> albums;
+    @OneToMany(mappedBy = "artist", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Album> albums;
     @Transient // cai nay dung de them thuoc tinh rieng o ngoai khong co trong bang database
     private String displayName;
 
