@@ -1,6 +1,7 @@
 package app;
 
 import entities.Artist;
+import service.AlbumService;
 import service.ArtistService;
 
 import java.util.List;
@@ -10,10 +11,10 @@ public class App {
         ArtistService artistService = new ArtistService();
         //CRUD
         //ReadList
-        List<Artist> artistList = new ArtistService().getArtists();
-        for(Artist a: artistList){
-            System.out.println(String.format("Id: %d, name: %s",a.getArtistId(),a.getName()));
-        }
+//        List<Artist> artistList = new ArtistService().getArtists();
+//        for(Artist a: artistList){
+//            System.out.println(String.format("Id: %d, name: %s",a.getArtistId(),a.getName()));
+//        }
         //Read by id
 //         Artist artist = artistService.getArtist(50000);
 //         if(artist!=null){
@@ -29,6 +30,9 @@ public class App {
 //        artistService.updateArtist(777,"Minh Vuong");
         //Delete
 //        artistService.removeArtist(777);
+        //Add new album
+        AlbumService albumService = new AlbumService();
+        albumService.addNewAlbumToArtist(1,348,"Nguoi tinh mua dong");
     }
 
 }

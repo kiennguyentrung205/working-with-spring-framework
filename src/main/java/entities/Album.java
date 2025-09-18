@@ -16,10 +16,9 @@ public class Album {
     public Album() {
     }
 
-    public Album(int id, String title, Artist arId) {
+    public Album(int id, String title) {
         this.id = id;
         Title = title;
-        this.arId = arId;
     }
 
     public int getId() {
